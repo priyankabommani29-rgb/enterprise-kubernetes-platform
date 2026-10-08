@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
     return res.end('ok');
   }
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello from backend API v1 (built by CI)\n');
+  res.end('Hello from backend API v2 (built by CI)\n');
 });
 
 server.listen(port, () => console.log('listening on ' + port));
