@@ -14,7 +14,7 @@ spec:
       automountServiceAccountToken: false
       containers:
       - name: backend
-        image: ghcr.io/priyankabommani29-rgb/ecommerce-backend:latest
+        image: ghcr.io/priyankabommani29-rgb/ecommerce-backend:cdf0ef9
         ports:
         - containerPort: 5678
         readinessProbe:
