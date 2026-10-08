@@ -1,1 +1,3 @@
 kubeseal.exe
+backups/
+sealed-secrets-key*.yaml
