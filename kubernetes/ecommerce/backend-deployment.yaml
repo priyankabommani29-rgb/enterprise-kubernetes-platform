@@ -14,11 +14,21 @@ spec:
       automountServiceAccountToken: false
       containers:
       - name: backend
-        image: hashicorp/http-echo
-        args:
-        - "-text=Hello from backend API"
+        image: ghcr.io/priyankabommani29-rgb/ecommerce-backend:latest
         ports:
         - containerPort: 5678
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 5678
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 5678
+          initialDelaySeconds: 10
+          periodSeconds: 10
         resources:
           requests:
             cpu: "100m"
